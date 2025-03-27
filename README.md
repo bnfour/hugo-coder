@@ -1,53 +1,47 @@
-<p align="center">
-  <p align="center">
-    <a href="https://themes.gohugo.io/hugo-coder/">
-      <img src="https://img.shields.io/badge/theme-hugo--coder-2b8cbe" alt="Hugo Theme Badge"">
-    </a>
-    <a href="https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.txt">
-      <img src="https://img.shields.io/github/license/luizdepra/hugo-coder.svg" alt="MIT License Badge">
-    </a>
-  </p>
+# Hugo-coder _fork_
+_(also known as hugo-coder-bn and/or Coder-bn)_
 
-  <p align="center">
-    <a href="https://github.com/luizdepra/hugo-coder">
-      <img src="images/logos/logotype-a.png" alt="Hugo Coder Logo" width="600px" height="184px">
-    </a>
-  </p>
-</p>
+> [!IMPORTANT]  
+> This repo hosts and describes the changes to a theme I made for my personal website. For general info about the theme, including installation and documentation, please visit the [upstream repo](https://github.com/luizdepra/hugo-coder).
 
-A simple and clean blog theme for [Hugo](https://gohugo.io/).
+A simple and clean "blog" theme for [Hugo](https://gohugo.io/), now even more minimalistic. Based on original [hugo-coder](https://github.com/luizdepra/hugo-coder) theme.
 
-![](images/screenshot.png)
+![✨WOW✨](images/fork-screenshot.png)
 
-## Live Demo
+## Live demo
+This theme is used on my personal website — https://www.bnfour.net/  
+There is not a lot of content there.
 
-See [here](https://hugo-coder.netlify.app/).
+## Fork features
+Differences from the upstream I can remember:
+- Very infrequent updates  
+I remember I have this site up once in multiple years ¯\\\_(ツ)\_/¯
+- The best error page known to mankind  
+(subjectively) (shared with my other websites)
+- Different color palette  
+To match my other websites
+- Carousel for multiple scrolling `<h2>` subheaders on the home page  
+Inspired by [this example](https://codepen.io/paras594/pen/JzjwJK)
+- Removal of some things I consider nonessential  
+Like most of animated transitions, some social metadata, integrity attributes for scripts from the same host anyway, _etc_
+- Other various small changes  
+Like square avatar, n-dash as years separator in the footer, different weight for Font Awesome icons, _etc etc_
 
-## Quick Start
+All these changes are available in the [`style-customization`](https://github.com/bnfour/hugo-coder/tree/style-customization) branch of this repo.
 
-1. Add the repository into your Hugo Project repository as a submodule, `git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder`.
-2. Configure your `hugo.toml`. You can either use [this minimal configuration](https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md#complete-example) as a base, or look for a complete explanation about all configurations [here](https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md). The [`hugo.toml`](https://github.com/luizdepra/hugo-coder/blob/master/exampleSite/hugo.toml) inside the [`exampleSite`](https://github.com/luizdepra/hugo-coder/tree/master/exampleSite) is also a good reference.
-3. Build your site with `hugo server` and see the result at `http://localhost:1313/`.
+### Carousel configuration
+To use the home page carousel, set `info` in the `params` section to a string array in `hugo.toml`:
+```toml
+[params]
+    info = ["Time stopper!", "Long sleeper!", "Easy gamer!"]
+```
 
-## Documentation
+Markdown formatting in these strings will be rendered.
 
-See the [`docs`](docs/home.md) folder.
+> [!TIP]  
+> If `info` is set to a single string, the custom layout, CSS, and JS are not rendered for backward compatibility.
 
-## License
-
-Coder is licensed under the [MIT license](https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.md).
-
-## Maintenance
-
-This theme is maintained by its author [Luiz de Prá](https://github.com/luizdepra) with the help from these awesome [contributors](CONTRIBUTORS.md).
-
-## Sponsoring
-
-If you like my project or it was useful for you, consider supporting its development. Just:
-
-<a href="https://www.buymeacoffee.com/luizdepra" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" height="41" width="174"></a>
-
-## Special Thanks
-
--   Gleen McComb, for his great [article](https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/) about custom pagination.
--   All contributors, for every PR and Issue reported.
+#### Known limitations
+Other parameters you might want to customize are hardcoded, including (but not limited to):
+- display width of the scroller; in CSS
+- scroll timings (delay between scrolls, transition time); in JS
