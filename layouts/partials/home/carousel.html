@@ -1,0 +1,11 @@
+{{ if reflect.IsSlice .Site.Params.info }}
+<div class="carousel-container">
+    <div id="textSlide" class="text-slide">
+        {{ range .Site.Params.info }}<h2>{{ . | markdownify }}</h2>{{ end }}
+        {{ $firstElem := index (.Site.Params.info) 0 }}
+        <h2 id="clone">{{ $firstElem | markdownify }}</h2>
+    </div>
+</div>
+{{ else }}
+<h2>{{ .Site.Params.info | markdownify }}</h2>
+{{ end }}

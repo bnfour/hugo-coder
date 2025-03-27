@@ -1,0 +1,16 @@
+.carousel-container {
+
+    max-width: 300px;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 15%, #000 50%, #000 85%, transparent 100%);;
+
+    .text-slide {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        h2 {
+            min-width: 100%;
+        }
+    }
+}

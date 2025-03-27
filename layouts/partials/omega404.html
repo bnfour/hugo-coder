@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>404 Not found</title>
+    {{ $script := resources.Get "js/error.js" | fingerprint }}
+    <script src="{{ $script.RelPermalink }}"></script>
+    {{ $cssOpts := (dict "targetPath" "css/error.css" ) }}
+    {{ $styles := resources.Get "scss/error.scss" | resources.ExecuteAsTemplate "style.error.css" . | toCSS $cssOpts | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+</head>
+<body>
+    <main class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="svg1" version="1.1" viewBox="0 0 800 800">
+            <defs id="defs1">
+                <clipPath id="clipPath4" clipPathUnits="userSpaceOnUse">
+                    <circle id="circle4" cx="446.715" cy="267.375" r="15.38" fill="#fff" stroke="none" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="37.826"/>
+                </clipPath>
+                <clipPath id="clipPath4-1" clipPathUnits="userSpaceOnUse">
+                    <circle id="circle4-2" cx="446.715" cy="267.375" r="15.38" fill="#fff" stroke="none" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="37.826"/>
+                </clipPath>
+                <clipPath id="clipPath5" clipPathUnits="userSpaceOnUse">
+                    <path id="lpe_path-effect5" fill="#000" stroke="none" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="60" d="M425.725 247.088h40.76v41.355h-40.76zm-5.922-7.034 54.85 38.663 6.754-34.36z" class="powerclip"/>
+                </clipPath>
+                <clipPath id="clipPath5-2" clipPathUnits="userSpaceOnUse">
+                    <path id="lpe_path-effect5-7" fill="#000" stroke="none" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="60" d="M425.725 247.088h40.76v40.76h-40.76zm-5.922-7.034 54.85 38.663 6.754-34.36z" class="powerclip"/>
+                </clipPath>
+                <clipPath id="clipPath4-9" clipPathUnits="userSpaceOnUse">
+                    <circle id="circle4-22" cx="446.715" cy="267.375" r="15.38" fill="#fff" stroke="none" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="37.826"/>
+                </clipPath>
+                <clipPath id="clipath_lpe_path-effect5-5" clipPathUnits="userSpaceOnUse">
+                    <path id="lpe_path-effect5-5" fill="#000" stroke="none" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="60" d="M425.725 247.088h40.76v41.355h-40.76zm-5.922-7.034 54.85 38.663 6.754-34.36z" class="powerclip"/>
+                </clipPath>
+            </defs>
+            <g id="layer2" display="inline" opacity="1">
+                <g id="all-body">
+                    <path id="body" fill="#000" stroke="none" d="M478.923 197.607c-13.982-1.303-28.634.066-41.854 4.803-29.74 10.658-53.221 30.665-77.876 52.49-24.656 21.825-50.736 54.465-67.928 74.789-17.192 20.323-44.115 9.166-39.59 20.808 4.524 11.642 11.061 46.628 5.329 83.794-5.733 37.166 23.773 61.494 38.639 52.65 14.866-8.843 149.999 4.551 151.422 23.306.976 12.86 60.06-.898 58.843-15.468-3.322-39.775 55.289-62.742 67.546-67.288 11.587-4.298-1.507-45.305-17.169-38.262-12.151 5.464-35.61-.21-40.996-9.11-4.761-7.865-6.847-19.216-2.745-27.445 6.09-12.216 28.765-17.994 34.993-21.27 21.827-11.48 23.658-27.072 27.446-43.913 3.031-13.479 1.479-28.863-4.803-41.168-6.919-13.552-20.428-23.296-33.621-30.876-17.438-10.02-37.611-15.973-57.636-17.84z" display="inline"/>
+                    <path id="arm-left" fill="none" stroke="#000" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="42" d="M278.548 352.803c-17.79-26.36-35.614-53.231-49.765-74.175-14.65-21.681-19.444-38.61-18.23-57.128 1.212-18.517 2.246-35.826 8.31-45.206 6.065-9.38 13.873-17.963 26.237-22.96 11.111-4.49 42.284-19.966 52.31-16.408"/>
+                    <path id="arm-right" fill="none" stroke="#000" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="42" d="M535.809 412.025c1.85 13.224 50.677-13.86 66.708-23.57 19.216-11.641 43.453-57.474 47.798-69.372 12.005-32.867 10.057-30.344 11.224-37.889 1.808-11.687 1.363-38.288-6.885-74.34-7.127-31.15-12.73-41.577-24.888-54.891-5.635-6.172-20.296-3.09-20.296-3.09" display="inline"/>
+                    <path id="leg-left" fill="none" stroke="#000" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="60" d="M300.955 419.015c-11.148 18.6-22.296 37.202-31.677 54.576-9.38 17.374-16.993 33.52-22.776 48.705-5.782 15.185-9.733 29.409-12.58 41.696-2.848 12.287-4.592 22.637-6.48 33.955-1.887 11.319-3.917 23.605-2.301 30.007 1.615 6.401 6.876 6.918 12.137 7.434"/>
+                    <path id="leg-right" fill="none" stroke="#000" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="60" d="M468.5 427a1308.294 1308.294 0 0 1 8 74.5c1.676 21.349 2.829 42.753 5.5 64 2.26 17.977 5.604 35.805 9.5 53.5 1.905 8.652 3.944 17.279 5.5 26 1.7 9.527 2.975 19.555 8.5 27.5a29.734 29.734 0 0 0 13.432 10.62A29.734 29.734 0 0 0 536 684.5"/>
+                </g>
+                <g id="eye-left" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clipPath5)" transform="rotate(-12.962 449.085 259.776)">
+                    <path id="eye-white-thing-how-does-it-called-again" fill="#fff" stroke="none" stroke-dasharray="none" stroke-opacity="1" stroke-width="37.826" d="M461.484 267.468a15.38 15.38 0 0 1-15.38 15.38 15.38 15.38 0 0 1-15.379-15.38 15.38 15.38 0 0 1 15.38-15.38 15.38 15.38 0 0 1 15.38 15.38z" display="inline"/>
+                    <path id="pupil" stroke-width="60" d="m444.4 248.963 4.14-.088c2.952 12.837 2.417 25.139.398 37.412l-4.714.088c-2.187-12.478-2.63-24.899.176-37.412z" clip-path="url(#clipPath4)" transform="matrix(1.00101 -.0044 -.0044 1.0191 .238 -2.749)"/>
+                </g>
+                <g id="eye-right" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clipath_lpe_path-effect5-5)" display="inline" transform="scale(-1 1) rotate(-12.962 -35.97 4563.422)">
+                    <path id="eye-white-thing-how-does-it-called-again-7" fill="#fff" stroke="none" stroke-dasharray="none" stroke-opacity="1" stroke-width="37.826" d="M461.484 267.468a15.38 15.38 0 0 1-15.38 15.38 15.38 15.38 0 0 1-15.379-15.38 15.38 15.38 0 0 1 15.38-15.38 15.38 15.38 0 0 1 15.38 15.38z" display="inline"/>
+                    <path id="pupil-3" stroke-width="60" d="m444.4 248.963 4.14-.088c2.952 12.837 2.417 25.139.398 37.412l-4.714.088c-2.187-12.478-2.63-24.899.176-37.412z" clip-path="url(#clipPath4-9)" transform="matrix(1.00101 -.0044 -.0044 1.0191 .238 -2.749)"/>
+                </g>
+                </g>
+                <g id="layer3" stroke="none" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-width="60">
+                <path id="path_for_text" fill="#f0f" d="M329.5 133.5s29.802-6.796 44.973-8.263c24.578-2.378 49.405-1.925 74.074-.826 23.218 1.034 46.392 3.51 69.373 6.972C539.803 134.68 583 144.5 583 144.5"/>
+                <text xml:space="preserve" id="unpronounceable" fill="#000" font-family="Iosevka" font-size="120" font-stretch="normal" font-style="normal" font-variant="normal" font-weight="400" style="-inkscape-font-specification:Iosevka"><textPath xlink:href="#path_for_text" id="textPath7" startOffset="40"><tspan id="tspan7">ЪУЪ</tspan></textPath></text>
+            </g>
+        </svg>
+        <h1>Not found</h1>
+        <a href="/">home page</a>
+    </main>
+</body>
+</html>

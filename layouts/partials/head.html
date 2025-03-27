@@ -12,10 +12,19 @@
 
 {{ partialCached "head/custom-styles.html" . }}
 
-{{ partialCached "head/custom-icons.html" . }}
-
 {{ partial "head/alternative-output-formats.html" . }}
 
-{{ if .IsHome }}{{ partial "head/hugo-generator.html" . }}{{ end }}
+{{ if .IsHome }}
+{{ partial "head/hugo-generator.html" . }}
+
+{{ if reflect.IsSlice .Site.Params.info }}
+{{ $script := resources.Get "js/home-carousel.js" | fingerprint }}
+<script src="{{ $script.RelPermalink }}"></script>
+{{ $cssOpts := (dict "targetPath" "css/home-carousel.css" ) }}
+{{ $styles := resources.Get "scss/home-carousel.scss" | resources.ExecuteAsTemplate "style.home-carousel.css" . | toCSS $cssOpts | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ end }}
+
+{{ end }}
 
 {{ partial "head/extensions.html" . }}

@@ -1,10 +1,10 @@
- {{ range .Site.Params.customCSS }}
+{{ range .Site.Params.customCSS }}
   {{ if hugo.IsServer }}
     {{ $styles := resources.Get . }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
   {{ else }}
     {{ $styles := resources.Get . | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
   {{ end }}
 {{ end }}
 
@@ -16,6 +16,6 @@
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
   {{ else }}
     {{ $styles := resources.Get . | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
   {{ end }}
 {{ end }}
